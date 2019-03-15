@@ -55,7 +55,7 @@ public class FindColorAdapter extends ArrayAdapter<FindColor> {
         }
 
         FindColor findColor = getItem(position);
-        viewHolder.colorView.setBackgroundColor(findColor.imageId);
+        viewHolder.colorView.setBackgroundColor(findColor.pxl);
         viewHolder.colorCode.setText(findColor.colorCode);
 
         return convertView;

@@ -1,12 +1,12 @@
 package kuppieproduct.io.colorcode;
 
 public class FindColor {
-    public int imageId;
+    int pxl;
     public String colorCode;
 
     public FindColor(int imageId, String colorCode){
         this.colorCode = colorCode;
-        this.imageId = imageId;
+        this.pxl = pxl;
     }
 
 }
