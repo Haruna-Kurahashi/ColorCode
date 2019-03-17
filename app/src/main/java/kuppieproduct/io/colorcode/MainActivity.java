@@ -30,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        listView = (ListView) findViewById(R.id.list_view);
+        setContentView(R.layout.choose_color);
+        listView = (ListView) findViewById(R.id.choosedcolorList);
         Colors = new ArrayList<Color>();
 
         adapter = new ColorAdapter(this, 0, new ArrayList<Color>());
         listView.setAdapter(adapter);
-
 
         imageView = (ImageView) findViewById(R.id.imageView);
         colorPreviewView = findViewById(R.id.colorPreview);
