@@ -6,15 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="6dp"
+    android:background="#fbfbfb"
     android:paddingBottom="16dp">
+
 
 
     <ImageView
         android:scaleType="centerCrop"
         android:id="@+id/imageView"
         android:layout_width="match_parent"
+        android:layout_margin="6dp"
         android:layout_height="246dp"
         android:src="@drawable/suisai01"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,6 +38,8 @@
             <View
                 android:id="@+id/colorPreview"
                 android:layout_width="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
                 android:layout_height="31dp"
                 android:layout_weight="1" />
 
@@ -38,17 +47,19 @@
                 android:id="@+id/addButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#eaf4fc"
+                android:layout_margin="6dp"
+                android:background="@drawable/layout"
                 android:onClick="addColor"
-                android:text="色を追加する" />
+                android:text="この色をストックする" />
 
-            <Button
+            */Button
                 android:id="@+id/stockButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#eaf4fc"
+                android:onClick="save"
+                android:background = "@drawable/layout"
                 android:text="お気に入りセットに保存" />
-
+                */
         </LinearLayout>
 
         <ListView
@@ -63,6 +74,8 @@
         android:id="@+id/addphoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="6dp"
         android:layout_gravity="right"
         android:clickable="true"
         app:backgroundTint="?attr/colorControlNormal"

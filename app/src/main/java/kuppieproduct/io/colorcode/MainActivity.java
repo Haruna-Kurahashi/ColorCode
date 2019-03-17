@@ -3,6 +3,7 @@ package kuppieproduct.io.colorcode;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton selectImageButton;
 
     public static int READ_REQUEST_CODE = 100;
+    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.choosedcolorList);
 
         selectImageButton = (FloatingActionButton) findViewById(R.id.addphoto);
+
+        /*pref = getSharedPreferences("stock_color", MODE_PRIVATE);
+        int colorpreview = pref.getInt("key_color", 0);
+        String codepreview = pref.getString("key_colorcode", "");*/
 
         Colors = new ArrayList<Color>();
 
@@ -120,5 +126,16 @@ public class MainActivity extends AppCompatActivity {
         String colorCode = "#" + Integer.toHexString(color).substring(2).toUpperCase();
         adapter2.add(new FindColor(color, colorCode));
         adapter2.notifyDataSetChanged();
+    }
+
+    public  void save(View view) {
+        int color = ((ColorDrawable) colorPreviewView.getBackground()).getColor();
+        String colorCode = "#" + Integer.toHexString(color).substring(2).toUpperCase();
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("key_color", color);
+        editor.putString("key_colorcode", colorCode);
+        editor.commit();
+
+        finish();
     }
 }

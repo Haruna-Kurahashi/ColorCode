@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/color_View"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
 
     <TextView
         android:id="@+id/colorCodeText"
@@ -12,6 +13,6 @@
         android:gravity="center"
         android:padding="8dp"
         android:textSize="20sp"
-        tools:text="#FFFFFF" />
+        tools:text="#343B40" />
 
 </RelativeLayout>
