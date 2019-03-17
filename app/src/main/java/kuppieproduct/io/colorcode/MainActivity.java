@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public void addColor(View view) {
         int color = ((ColorDrawable) colorPreviewView.getBackground()).getColor();
         String colorCode = "#" + Integer.toHexString(color).substring(2).toUpperCase();
-        adapter.add(new FindColor(colorCode, color));
-        adapter.notifyDataSetChanged();
+        adapter2.add(new FindColor(colorCode, color));
+        adapter2.notifyDataSetChanged();
     }
 }
