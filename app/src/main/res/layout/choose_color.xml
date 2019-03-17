@@ -42,6 +42,13 @@
                 android:onClick="addColor"
                 android:text="色を追加する" />
 
+            <Button
+                android:id="@+id/stockButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaf4fc"
+                android:text="お気に入りセットに保存" />
+
         </LinearLayout>
 
         <ListView
@@ -52,10 +59,13 @@
             android:orientation="vertical" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/stockButton"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addphoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#eaf4fc"
-        android:text="お気に入りセットに保存" />
+        android:layout_gravity="right"
+        android:clickable="true"
+        app:backgroundTint="?attr/colorControlNormal"
+        app:srcCompat="@drawable/plusbutton" />
+
 </LinearLayout>
