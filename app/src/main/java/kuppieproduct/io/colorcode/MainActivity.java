@@ -75,11 +75,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void addColor(View view) {
         int color = ((ColorDrawable) colorPreviewView.getBackground()).getColor();
-        adapter2.add(new FindColor("#FFFFFF", color));
-        adapter2.notifyDataSetChanged();
-
+        String colorCode = "#" + Integer.toHexString(color).substring(2).toUpperCase();
+        adapter.add(new FindColor(colorCode, color));
+        adapter.notifyDataSetChanged();
     }
 }

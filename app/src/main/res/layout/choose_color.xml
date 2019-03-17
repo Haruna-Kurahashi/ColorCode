@@ -38,6 +38,7 @@
                 android:id="@+id/addButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#eaf4fc"
                 android:onClick="addColor"
                 android:text="色を追加する" />
 
@@ -55,5 +56,6 @@
         android:id="@+id/stockButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#eaf4fc"
         android:text="お気に入りセットに保存" />
 </LinearLayout>

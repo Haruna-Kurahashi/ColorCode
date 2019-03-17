@@ -21,6 +21,6 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/plusbutton"
-        app:backgroundTint="@android:color/background_light" />
+        app:backgroundTint="#f8f8ff" />
 
 </RelativeLayout>
